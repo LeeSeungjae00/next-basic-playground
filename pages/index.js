@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -10,6 +11,16 @@ export default function Home() {
       </Head>
 
       <main>
+        <h1 className={styles.title}>
+          React this Post {' '}<Link href="/posts/first-post">첫글</Link>
+        </h1>
+        <h1 className={styles.title}>
+          React this Post {' '}<a href="/posts/first-post">첫글 a태그</a>
+        </h1>
+
+        {/* Link 태그를 사용한다면 추가적인 부분만 가져오지만 a 태그는 그냥 문서를 다 가져옴
+        Client Side Naviage -> js 상에서만 page 이동 */}
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
